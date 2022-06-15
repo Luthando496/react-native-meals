@@ -43,7 +43,7 @@ const RestaurantScreen = (props) => {
       data={restaurants}
       keyExtractor={item => item.name}
       renderItem={item => (
-        <ResturantInfoCard restaurant={item}  />
+        <ResturantInfoCard restaurant={item.item}  />
 
       )}
         />

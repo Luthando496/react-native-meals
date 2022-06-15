@@ -56,7 +56,7 @@ const ResturantInfoCard = ({restaurant = {}}) => {
     // console.log(ratingA)
     const ratingA = [1,2,3,4]
     
-    const {name='MY NOBR',photos=['https://www.foodiesfeed.com/wp-content/uploads/2021/10/carrot-cake-with-fresh-fruits-777x1024.jpg.webp'],icon,address="Perm Gardens",rating=5,isOpenNow=true,isClosedTemporarily=''} = restaurant.item;
+    const {name='MY NOBR',photos=['https://www.foodiesfeed.com/wp-content/uploads/2021/10/carrot-cake-with-fresh-fruits-777x1024.jpg.webp'],icon,address="Perm Gardens",rating=5,isOpenNow=true,isClosedTemporarily=''} = restaurant;
 
     // console.log(restaurant.item)
 
