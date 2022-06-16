@@ -9,6 +9,7 @@ import {useFonts} from 'expo-font'
 import TabNavigator from './src/Tab Navigators/TabNavigator';
 import {restaurantsRequest} from './src/Services/Restuarants/RestuarantServices';
 import { RestaurantsContextProvider } from './src/Services/Restuarants/RestaurantContext';
+import { LocationContextProvider } from './src/Services/location/location.context';
 
 
 
@@ -36,6 +37,8 @@ const App =()=> {
   
   return (
     <>
+    <LocationContextProvider>
+
     <RestaurantsContextProvider >
 
     <ThemeProvider theme={theme}>
@@ -46,6 +49,7 @@ const App =()=> {
     </PaperProvider>
     </ThemeProvider>
     </RestaurantsContextProvider>
+    </LocationContextProvider>
     </>
   );
 }

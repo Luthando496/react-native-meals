@@ -6,7 +6,7 @@ import Icon from '@expo/vector-icons/FontAwesome';
 import Map from '../Components/Map';
 import Settings from '../Components//Settings';
 
-import RestaurantScreen from '../Features/Restaurants/Screens/RestaurantScreen';
+import HomeNavigator from '../StackNavigator/HomeNavigator';
 
 
 const Tab = createBottomTabNavigator()
@@ -21,7 +21,7 @@ const TabNavigator = () => {
         headerShown:false,
         tabBarActiveTintColor:'pink'}}>
             
-    <Tab.Screen name="Home" component={RestaurantScreen} options={{
+    <Tab.Screen name="Home" component={HomeNavigator} options={{
         headerShown:false,
         tabBarIcon:({color})=>(
             <Ionicons name='home' style={{color}} size={30} />

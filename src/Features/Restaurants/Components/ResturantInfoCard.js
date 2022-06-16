@@ -6,6 +6,7 @@ import styled from 'styled-components/native';
 import {SvgCssUri  } from 'react-native-svg';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
+
 const star = require('../../../../assets/star')
 
 const Title = styled(Text)`
@@ -56,9 +57,9 @@ const ResturantInfoCard = ({restaurant = {}}) => {
     // console.log(ratingA)
     const ratingA = [1,2,3,4]
     
-    const {name='MY NOBR',photos=['https://www.foodiesfeed.com/wp-content/uploads/2021/10/carrot-cake-with-fresh-fruits-777x1024.jpg.webp'],icon,address="Perm Gardens",rating=5,isOpenNow=true,isClosedTemporarily=''} = restaurant;
+    const {name='MY NOBR',photos=['https://www.foodiesfeed.com/wp-content/uploads/2021/10/carrot-cake-with-fresh-fruits-777x1024.jpg.webp'],icon,vicinity="Perm Gardens",rating=5,isOpenNow=true,isClosedTemporarily=''} = restaurant;
 
-    // console.log(restaurant.item)
+    // console.log(restaurant.vicinity)
 
     
     return (
@@ -77,11 +78,12 @@ const ResturantInfoCard = ({restaurant = {}}) => {
                         </StarContainer>
 
         {isOpenNow && <Ionicons name="lock-open-outline" size={24} color="black" />}
+        {!isOpenNow && <Ionicons name="lock-closed-sharp" size={24} color="black" />}
                 </Star>
 
 
                 
-        <Address>{address}</Address>
+        <Address>{vicinity}</Address>
 
             </Info>
 
